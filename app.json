@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Gaming Laptop",
+        "price": 1295,
+        "image": "https://image2url.com/r2/default/images/1774798595908-6be7c0e1-eae9-4d08-8537-c75d993a2a07.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Shirt",
+        "price": 199,
+        "image": "https://image2url.com/r2/default/images/1774798827835-a844a754-e9d7-457b-8da5-372d4b901059.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Gaming Mouse",
+        "price": 99,
+        "image": "https://image2url.com/r2/default/images/1774798849684-ff95717a-3b46-4004-850d-1c71a5a683c6.jpg"
+    }
+]
