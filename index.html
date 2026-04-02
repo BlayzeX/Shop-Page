@@ -4,26 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>My Shop</title>
+    <title>Shop Page</title>
 </head>
 <body>
+    <input type="text" name="find" id="input" placeholder="Search...">
     <header>
-        <h1>My Shop</h1>
-        <div class="icons">
-        <img src="https://image2url.com/r2/default/images/1774799238052-3a2b58e8-762f-4960-a02f-14b891d1182b.png" alt="shop icon" id="shop-icon">
+        <h1>Shop</h1>
+        <img src="https://image2url.com/r2/default/images/1775067957981-9c3d927f-0078-436b-a238-7423a231f623.png" alt="Shop Icon" id="shop-icon">
         <span id="cart-count">0</span>
-        </div>
     </header>
-        <div class="container">
-            <div class="products"></div>
+    <div class="cart">
+        <h2 class="h2">Shopping Cart</h2>
+        <p id="cart-items">No items in the cart.</p>
+        <p id="cart-price">Total: $0.00</p>
+        <button id="cancel-button">Cancel</button>
+        <button id="checkout-button">Checkout</button>
+    </div>
+    <div class="container">
+        <div class="product">
+            <h2>Product 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button>Add to Cart</button>
         </div>
-        <div class="cart">
-            <h2>Shopping Cart</h2>
-            <div class="cart-items"></div>
-            <div class="cart-total">
-                <h3>Total: $<span id="total-price">0.00</span></h3>
-            </div>
+        <div class="product">
+            <h2>Product 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button>Add to Cart</button>
         </div>
-    <script src="script.js"></script>
+        <div class="product">
+            <h2>Product 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button>Add to Cart</button>
+        </div>
 </body>
 </html>
