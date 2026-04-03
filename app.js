@@ -1,10 +1,9 @@
- const icon =  document.getElementById('div-Icon');
- const span = document.getElementById('cart-count');
-icon.addEventListener('click', function() {
-    document.querySelector('.cart').classList.toggle('open');
-    icon.classList.toggle("margin");
-    span.classList.toggle("margin");
+const icon = document.getElementById('shop-icon');
+const cart = document.getElementById('cart');
+const cancel = document.getElementById('cancel-button');
+icon.addEventListener('click', function(){
+    cart.style.display = 'block';
 });
-document.getElementById('cancel-button').addEventListener('click', function(){
-    document.querySelector('.cart').className = 'cart';
+cancel.addEventListener('click', function(){
+    cart.style.display = 'none';
 });
