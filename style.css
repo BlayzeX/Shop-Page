@@ -86,19 +86,19 @@ h2 {
 .img-product {
     width: 90%;
 }
-#plus {
+.plus {
     position: absolute;
     top: 0;
     right: 0;
     width: 10%;
     padding: 10px;
     border: none;
-    background-color: green;
+    background-color: yellow;
     cursor: pointer;
     transition: all 0.3s ease;
 }
-#plus:hover {
-    background-color: darkgreen;
+.plus:hover {
+    background-color: darkorange;
 }
 em {
     display: block;
@@ -119,14 +119,12 @@ em {
     border-radius: 10px;
     padding: 20px;
     width: 35%;
-    min-height: 300px;
+    height: 300px;
+    overflow: hidden;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
 }
 .cart h2 {
     margin-bottom: 20px;
-}
-#cart-items {
-    margin-bottom: 150px;
 }
 .cart-button {
     padding: 10px 20px;
@@ -156,4 +154,55 @@ em {
     color: green;
     font-weight: bold;
 }
-
+.div {
+    width: 100%;
+    background-color: #c0c0c0;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-left: 5px;
+}
+#total {
+    position: absolute;
+    top: 80%;
+    left: 45%;
+}
+.btn {
+    position: absolute;
+    left: 92%;
+    padding: 5px 7px;
+    border: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+.add {
+    background-color: rgb(0, 173, 0);
+    border: none;
+    position: absolute;
+    height: 30px;
+    left: 74%;
+    padding: 5px;
+    color: white;
+    margin-top: 13px;
+    cursor: pointer;
+    transition: all 0.5 ease;
+}
+.add:hover {
+    background-color: rgb(0, 116, 0);
+}
+.price {
+    position: absolute;
+    top: 20px;
+    font-size: 1.2rem;
+}
+.efect {
+    color: gb(2, 162, 2);
+    position: absolute;
+    top: 80px;
+    left: 95%;
+    transition: all 0.5 ease;
+}
+.efectTwo {
+    transform: translateX(-10px);
+}
