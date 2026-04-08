@@ -1,4 +1,21 @@
 let totalPrice = 0;
+     const total = document.getElementById('totale');
+     const prices = {
+        laptop: 100,
+        shirt: 50,
+        mouse: 20,
+        tablet: 70,
+        hoody: 80,
+        camera: 60
+     };
+     const description = {
+        laptop: 'High-performance laptop with 16GB RAM and 512GB SSD.',
+        shirt: 'Comfortable cotton shirt available in various colors.',
+        mouse: 'Ergonomic wireless mouse with adjustable DPI.',
+        tablet: 'Portable tablet with a 10-inch display and long battery life.',
+        hoody: 'Cozy hoodie made from soft fleece material.',
+        camera: 'Compact digital camera with 20MP resolution and 4K video recording.'   
+     };
 const icon = document.getElementById('shop-icon');
 const cart = document.getElementById('cart');
 const cancel = document.getElementById('cancel-button');
@@ -22,43 +39,43 @@ function addElement(productName){
     };
     const img = document.createElement('img');
     img.src = images[productName];
-    img.width = 65;
-    
+    img.width = 75;
+    img.className = 'img';
    const items = document.getElementById('cart-items');
    const deleteBtn = document.createElement('button');
-   deleteBtn.className = 'btn'
+   deleteBtn.className = 'btn';
    deleteBtn.textContent = 'X';
    const div = document.createElement('div');
    div.className = 'div';
-   const addToTotale = document.createElement('button');
-   addToTotale.textContent = 'Add to Total'
-   addToTotale.className = 'add';
+   div.dataset.product = productName;
+   const priceText = document.createElement('p');
+   priceText.className = 'p';
+   priceText.textContent = '$' + prices[productName];
+   const descText = document.createElement('p');
+   descText.textContent = description[productName];
+   descText.className = 'description';
 
    div.appendChild(img);
    div.appendChild(deleteBtn);
-   div.appendChild(addToTotale);
+   div.appendChild(priceText);
+   div.appendChild(descText);
    items.appendChild(div);
 
    const num = items.children.length;
   cartCounnt.textContent = num.toString();
   console.log(num);
-
-  addToTotale.onclick = function(){
-     const total = document.getElementById('totale');
-     const prices = {
-        laptop: 100,
-        shirt: 50,
-        mouse: 20,
-        tablet: 70,
-        hoody: 80,
-        camera: 60
-     };
+   const total = document.getElementById('totale');
      const price = prices[productName];
      totalPrice = totalPrice + price;
      total.textContent = totalPrice;
-  };
-
-   deleteBtn.onclick = function(){
+    deleteBtn.onclick = function(){
+    const name = div.dataset.product;
+    const itemPrice = prices[name];
+    totalPrice -= itemPrice;
+    total.textContent = totalPrice;
     div.remove();
+    cartCounnt.textContent = items.children.length;
 };
 };
+
+
