@@ -17,7 +17,7 @@ A fully functional e-commerce product page built with HTML, CSS & Vanilla JavaSc
 - Vanilla JavaScript
 
 ## Preview
-![Shop Preview](preview-Copy.png)
+![Shop Preview](preview.png)
 
 ## What I Learned
 - DOM manipulation at scale
