@@ -26,9 +26,12 @@ cancel.addEventListener('click', function(){
     cart.style.display = 'none';
 });
 function addElement(productName){
+  const data = document.querySelector(`[data-product="${productName}"]`);
+         if(data !== null) {
+        return;
+ }
+
    const cartCounnt = document.getElementById('cart-count');
-   const cart = document.getElementById('cart');
-   const body = document.querySelector('body');
    const images = {
      laptop: 'https://image2url.com/r2/default/images/1775161214671-8f5be9f8-d18f-4375-9da7-3e672acaed43.png',
      shirt: 'https://image2url.com/r2/default/images/1775162005757-15b2771f-4753-4419-aa34-0de5a47a0ba4.png',
@@ -54,13 +57,24 @@ function addElement(productName){
    const descText = document.createElement('p');
    descText.textContent = description[productName];
    descText.className = 'description';
+   const addBtn = document.createElement('button');
+   addBtn.textContent = '<';
+   addBtn.className = 'backBtn';
+   const backBtn = document.createElement('button');
+   backBtn.textContent = '>';
+   backBtn.className = 'addBtn';
+   const addText = document.createElement('p');
+   addText.textContent = '0';
+   addText.className = 'addText';
 
    div.appendChild(img);
    div.appendChild(deleteBtn);
    div.appendChild(priceText);
    div.appendChild(descText);
+   div.appendChild(addBtn);
+   div.appendChild(addText);
+   div.appendChild(backBtn);
    items.appendChild(div);
-
    const num = items.children.length;
   cartCounnt.textContent = num.toString();
   console.log(num);
@@ -77,5 +91,8 @@ function addElement(productName){
     cartCounnt.textContent = items.children.length;
 };
 };
+
+
+
 
 
