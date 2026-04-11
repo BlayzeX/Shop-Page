@@ -30,4 +30,4 @@ A fully functional e-commerce product page built with HTML, CSS & Vanilla JavaSc
 - Dynamic event listeners
 
 ## Live Demo
-Coming soon...
+https://blayzex.github.io/Shop-Page/
