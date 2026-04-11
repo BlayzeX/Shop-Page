@@ -1,15 +1,17 @@
 # Shop Page 🛒
 
-A fully functional e-commerce product page built with HTML, CSS & Vanilla JavaScript — no frameworks, no shortcuts.
+A fully functional e-commerce product page built with HTML, CSS & Vanilla JavaScript — no frameworks, no tutorials, just pure logic.
 
 ## Features
-- 6 products displayed dynamically
+- 6 dynamic products rendered from JavaScript objects
 - Add to cart with one click
 - Prevent adding the same product twice 🚫
-- Product image, description & price in cart
-- Delete item → price & counter update automatically
-- Total price calculates in real time 💰
-- Smooth cart sidebar animation
+- Product image, description & price displayed in cart
+- Quantity system (+ and -) per item
+- Real-time total price calculation 💰
+- Cart counter updates automatically
+- Cart saves after page refresh (localStorage) 💾
+- Clean and organized code structure
 
 ## Built With
 - HTML
@@ -19,12 +21,13 @@ A fully functional e-commerce product page built with HTML, CSS & Vanilla JavaSc
 ## Preview
 ![Shop Preview](preview.png)
 
-## What I Learned
-- DOM manipulation at scale
+## Key Concepts Used
+- DOM manipulation
 - Data attributes (`data-product`)
-- Dynamic element creation
 - Object-based data structures
-- Event delegation logic
+- localStorage + JSON
+- Array methods (find, filter, forEach, reduce)
+- Dynamic event listeners
 
 ## Live Demo
 Coming soon...
