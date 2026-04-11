@@ -12,9 +12,6 @@ body {
     transition: margin-right 0.3s ease;
     padding-bottom: 20px;
 }
-    .cart-open {
-    margin-right: 300px;
-}
 
 header {
     padding: 20px;
@@ -27,11 +24,12 @@ header {
     position: relative;
     cursor: pointer;
     margin-right: 30px;
+    transition: all 0.3s ease;
 }
 #cart-count {
     position: absolute;
     top: 88px;
-    right: 8px;
+    right: 5px;
     background-color: red;
     color: white;
     border-radius: 50%;
@@ -63,7 +61,7 @@ h1 {
     height: 100%;
     width: 90%;
     padding: 20px;
-    margin-left: 80px;
+    margin: auto;
     border-radius: 10px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
 }
@@ -174,15 +172,6 @@ em {
     top: 80%;
     left: 45%;
 }
-.btn {
-    position: absolute;
-    right: 0;
-    padding: 5px 7px;
-    border: none;
-    background-color: red;
-    color: white;
-    cursor: pointer;
-}
 .price {
     position: absolute;
     top: 20px;
@@ -198,56 +187,105 @@ em {
 .efectTwo {
     transform: translateX(-10px);
 }
-.p{
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: green;
-    position: absolute;
-    margin-top: 22px;
-    left: 85%;
-}
-.description {
-    position: absolute;
-    left: 18%;
-    margin-top: 29px;
-    font-size: 1rem;
-    margin-right: 15px;
-    color: #333;
-}
-.backBtn {
-    position: absolute;
-    top: 50px;
-    left: 75%;
-    transform: translateX(-50%);
-    padding: 2px 12px;
-    border: none;
-    background-color: gray;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
 .addBtn:hover {
     background-color: darkgray;
-}
-.addBtn {
-    position: absolute;
-    top: 50px;
-    left: 83%;
-    padding: 2px 12px;
-    border: none;
-    background-color: gray;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
 }
 .backBtn:hover {
     background-color: darkgray;
 }
+.totalePrice {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+.div {
+    width: 100%;
+    background-color: #c0c0c0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 15px;
+    padding: 10px;
+    gap: 10px;
+    min-height: 80px;
+    border-radius: 5px;
+}
+
+.description {
+    flex: 1;
+    font-size: 0.8rem;
+    color: #333;
+    /* احذف position, left, margin-top */
+}
+
+.p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: green;
+    white-space: nowrap;
+    /* احذف position, absolute, left, margin-top */
+}
+
 .addText {
-    position: absolute;
-    top: 50px;
-    right: 105px;
     font-size: 1rem;
     color: green;
-    z-index: 1;
+    /* احذف position, absolute, top, right */
+}
+
+.backBtn, .addBtn {
+    padding: 2px 8px;
+    border: none;
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+    /* احذف position, absolute, top, left */
+}
+
+.btn {
+    padding: 5px 7px;
+    border: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* احذف position absolute */
+}
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    #cart {
+        width: 90%;
+    }
+
+    #input {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 90%;
+    }
+
+    #cart-count {
+        top: 75px;
+        right: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        font-size: 0.7rem;
+    }
 }
